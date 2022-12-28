@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewYearAnimation", "NewYearAnimation.csproj", "{37E56C07-8FAC-4FDF-A7DD-F85CEF6BF0BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37E56C07-8FAC-4FDF-A7DD-F85CEF6BF0BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E56C07-8FAC-4FDF-A7DD-F85CEF6BF0BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E56C07-8FAC-4FDF-A7DD-F85CEF6BF0BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E56C07-8FAC-4FDF-A7DD-F85CEF6BF0BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0397DCED-3F66-4475-B723-C84EF60ADF97}
+	EndGlobalSection
+EndGlobal

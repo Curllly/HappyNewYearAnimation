@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="background.jpg" />
+    <None Remove="broom.png" />
+    <None Remove="bucket.png" />
+    <None Remove="scarf.png" />
+    <None Remove="snowball.png" />
+    <None Remove="snowmanFace.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="background.jpg" />
+    <Resource Include="broom.png" />
+    <Resource Include="bucket.png" />
+    <Resource Include="scarf.png" />
+    <Resource Include="snowball.png" />
+    <Resource Include="snowmanFace.png" />
+  </ItemGroup>
+
+</Project>

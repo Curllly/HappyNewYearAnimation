@@ -1,0 +1,152 @@
+﻿<Window x:Class="NewYearAnimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewYearAnimation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="Image" x:Key="SnowballStyle">
+            <Setter Property="Width" Value="75"/>
+        </Style>
+        <Style TargetType="Image" x:Key="BigSnowballStyle" BasedOn="{StaticResource SnowballStyle}">
+            <Setter Property="Width" Value="100"/>
+        </Style>
+        <Style TargetType="Image" x:Key="SmallSnowballStyle" BasedOn="{StaticResource SnowballStyle}">
+            <Setter Property="Width" Value="50"/>
+        </Style>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="MouseDown" SourceName="BigPart">
+            <BeginStoryboard>
+                <Storyboard Storyboard.TargetName="BigPart">
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="100"
+                                     Storyboard.TargetProperty="(Canvas.Left)"/>
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="300"
+                                     Storyboard.TargetProperty="(Canvas.Top)"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="MouseDown" SourceName="MiddlePart">
+            <BeginStoryboard>
+                <Storyboard Storyboard.TargetName="MiddlePart">
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="110"
+                                     Storyboard.TargetProperty="(Canvas.Left)"/>
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="230"
+                                     Storyboard.TargetProperty="(Canvas.Top)"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="MouseDown" SourceName="SmallPart">
+            <BeginStoryboard>
+                <Storyboard Storyboard.TargetName="SmallPart">
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="122"
+                                     Storyboard.TargetProperty="(Canvas.Left)"/>
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="190"
+                                     Storyboard.TargetProperty="(Canvas.Top)"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="MouseDown" SourceName="Face">
+            <BeginStoryboard>
+                <Storyboard Storyboard.TargetName="Face">
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="166"
+                                     Storyboard.TargetProperty="(Canvas.Left)"/>
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="200"
+                                     Storyboard.TargetProperty="(Canvas.Top)"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="MouseDown" SourceName="Bucket">
+            <BeginStoryboard>
+                <Storyboard Storyboard.TargetName="Bucket">
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="122"
+                                     Storyboard.TargetProperty="(Canvas.Left)"/>
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="220"
+                                     Storyboard.TargetProperty="(Canvas.Top)"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="MouseDown" SourceName="Scarf">
+            <BeginStoryboard>
+                <Storyboard Storyboard.TargetName="Scarf">
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="115"
+                                     Storyboard.TargetProperty="(Canvas.Left)"/>
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="230"
+                                     Storyboard.TargetProperty="(Canvas.Top)"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="MouseDown" SourceName="Broom">
+            <BeginStoryboard>
+                <Storyboard Storyboard.TargetName="Broom">
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="80"
+                                     Storyboard.TargetProperty="(Canvas.Left)"/>
+                    <DoubleAnimation Duration="0:0:3"
+                                     To="230"
+                                     Storyboard.TargetProperty="(Canvas.Top)"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Canvas>
+        <Canvas.Background>
+            <ImageBrush ImageSource="/background.jpg"/>
+        </Canvas.Background>
+        <!--Body-->
+        <Image Source="/snowball.png" Style="{StaticResource BigSnowballStyle}"
+               Canvas.Left="700"
+               Canvas.Top="0"
+               x:Name="BigPart"/>
+
+        <Image Source="/snowball.png" Style="{StaticResource SnowballStyle}"
+               Canvas.Left="615"
+               Canvas.Top="10"
+               x:Name="MiddlePart"/>
+        
+        <Image Source="/snowball.png" Style="{StaticResource SmallSnowballStyle}"
+               Canvas.Left="555"
+               Canvas.Top="25"
+               x:Name="SmallPart"/>
+        <!--Head-->
+        <Image Source="/snowmanFace.png" Width="35"
+               Canvas.Left="540"
+               Canvas.Top="28"
+               x:Name="Face">
+
+            <Image.RenderTransform>
+                <ScaleTransform ScaleX="-1"/>
+            </Image.RenderTransform>
+        </Image>
+        <!--Attributes-->
+        <Image Source="/bucket.png" Width="55"
+               Canvas.Left="425"
+               Canvas.Top="80"
+               x:Name="Bucket">
+            <Image.RenderTransform>
+                <ScaleTransform ScaleY="-1"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="/broom.png" Height="200"
+               Canvas.Left="680" Canvas.Top="100"
+               x:Name="Broom"/>
+        <Image Source="/scarf.png" Height="80"
+               Canvas.Left="680" Canvas.Top="100"
+               x:Name="Scarf"/>
+    </Canvas>
+</Window>
